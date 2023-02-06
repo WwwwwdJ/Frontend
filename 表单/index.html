@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="app">
-      <form class="form">
+      <form class="form" @submit.prevent="handleSubmit">
         <div>
           <label for="username">用户名：</label>
           <input id="username" type="text" />
@@ -71,8 +71,9 @@
 
         <div>
           <label for="intro">自我介绍：</label>
-          <textarea rows="10" v-model="intro"></textarea>
+          <textarea id="intro" rows="10" v-model="intro"></textarea>
         </div>
+        <button type="submit">提交</button>
       </form>
       <div class="result">
         <ul>
