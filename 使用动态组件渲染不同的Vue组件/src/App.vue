@@ -17,7 +17,9 @@ export default {
 <template>
   <main>
     <div>
-      <component :is="currentForm" />
+      <KeepAlive>
+        <component :is="currentForm" />
+      </KeepAlive>
       <div class="buttons">
         <button
           v-if="currentForm === 'RegisterForm'"
